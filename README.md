@@ -68,4 +68,11 @@ https://github.com/user-attachments/assets/cf098877-400a-47ec-990d-639f0e0a9f82
 
 
 
+👤 Auteur:
+Fatima-Ezzahra BOUMAIZE
+🎓 Data Maroc Bootcamp — Promotion octobre-2026
+📧 fatimaezzahraboumaize020@gmail.com
+
+
+
 
