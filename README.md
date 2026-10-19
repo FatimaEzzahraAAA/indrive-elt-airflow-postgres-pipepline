@@ -1,5 +1,14 @@
 # 🚗 InDrive Real-Time Data Pipeline & Analytics
 
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?logo=apacheairflow&logoColor=white)](https://airflow.apache.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)](https://grafana.com/)
+[![SQL](https://img.shields.io/badge/SQL-4479A1?logo=mysql&logoColor=white)](#)
+[![Status](https://img.shields.io/badge/Status-Completed-success)](#)
+[![License](https://img.shields.io/badge/License-MIT-green)](#)
+
 ## 📖 Overview
 This project is a complete **End-to-End ELT (Extract, Load, Transform) Data Pipeline** simulating the operations of a ride-hailing service (InDrive) in Casablanca. It ingests real-time streaming data and batch files, cleanses the data through a Medallion Architecture (Raw → Staging → Mart), and visualizes live business KPIs on a Grafana dashboard.
 
