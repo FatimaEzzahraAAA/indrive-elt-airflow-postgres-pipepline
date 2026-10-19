@@ -48,6 +48,25 @@ services:
     ports:
       - "8083:8080"        # http://localhost:8083
 
+  # ==========================================
+  # AJOUT GRAFANA ICI
+  # ==========================================
+  grafana:
+    image: grafana/grafana:latest
+    container_name: indrive-grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"        # http://localhost:3000
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+
 volumes:
   pgdata:
   airflow_home:
+  grafana_data:            # AJOUT DU VOLUME GRAFANA
