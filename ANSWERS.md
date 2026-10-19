@@ -4,9 +4,7 @@ Name: Boumaize Fatima-ezzahra
 
 Short answers (1-3 sentences). Write them as you go.
 
-## Q1 — Which sources are **batch** and which is **streaming**? 
-## Why does the data team handle them differently? 
-## Which one is the **fact** and which are the **dimensions**?
+## Q1 — Which sources are **batch** and which is **streaming**? Why does the data team handle them differently? Which one is the **fact** and which are the **dimensions**?
 
 Your answer: ------------------------
 
@@ -41,9 +39,7 @@ Your answer: ------------------------
 
 This is called a Self-Join 
 
-## Q5 — How many rides are in `raw.rides`, in `staging.rides`? 
-## Where did the others go? 
-## Why is filtering in staging better than letting the `JOIN` in the mart drop them silently?
+## Q5 — How many rides are in `raw.rides`, in `staging.rides`? Where did the others go? Why is filtering in staging better than letting the `JOIN` in the mart drop them silently?
 
 Your numbers: `raw.rides` = 510 ; `staging.rides` = 473
 
@@ -58,8 +54,7 @@ The missing rows were filtered out because they either had a fare_amount <= 0 or
 
 Filtering in staging is better because it isolates data quality issues early, keeping the mart layer clean and preventing silent data loss during complex joins.
 
-## Q6 — You re-run `3_staging` three times. Why is there no duplicate?
-## What would happen if the SQL used `INSERT INTO` instead of `DROP` + `CREATE TABLE AS`?
+## Q6 — You re-run `3_staging` three times. Why is there no duplicate? What would happen if the SQL used `INSERT INTO` instead of `DROP` + `CREATE TABLE AS`?
 
 Your answer: ------------------------
 
@@ -71,9 +66,7 @@ There is no duplicate because the SQL uses DROP TABLE IF EXISTS followed by CREA
 
 If it used INSERT INTO, running it 3 times would append the same data 3 times, creating duplicates.
 
-## Q7 — Is `fare_amount` additive, semi-additive or non-additive? 
-## And `rating`? 
-## What would be wrong with `SUM(rating)`?
+## Q7 — Is `fare_amount` additive, semi-additive or non-additive? And `rating`?  What would be wrong with `SUM(rating)`?
 
 Your answer: ------------------------
 
@@ -89,10 +82,7 @@ rating is non-additive
 
 Using SUM(rating) would give you a meaningless number, we should use AVG(rating) instead.
 
-## Q8 — The back office changes a driver's rating in `drivers.csv` and `2_batch` reloads it. 
-## What happens to the **old** rides of this driver in `mart.rides`? 
-## Is it correct for InDrive? 
-## Which technique would keep the rating the driver had *at the time of the ride*?
+## Q8 — The back office changes a driver's rating in `drivers.csv` and `2_batch` reloads it.  What happens to the **old** rides of this driver in `mart.rides`?  Is it correct for InDrive?  Which technique would keep the rating the driver had *at the time of the ride*?
 
 Your answer: ------------------------
 
